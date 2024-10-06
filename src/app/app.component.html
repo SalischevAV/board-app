@@ -1,8 +1,25 @@
 <app-header />
 <main>
   <app-main-board>
-    <app-server-status />
+    <app-dashboard-item
+      [image]="{src: 'status.png', alt: 'A status'}"
+      title="Server Status"
+    >
+      <app-server-status />
+    </app-dashboard-item>
+
+    <app-dashboard-item
+       [image]="{src: 'globe.png', alt: 'A globe'}"
+      title="Server Status"
+    >
     <app-traffic />
+  </app-dashboard-item>
+
+  <app-dashboard-item
+    [image]="{src: 'list.png', alt: 'A list of items'}"
+      title="traffic"
+  >
     <app-tickets />
+  </app-dashboard-item>
   </app-main-board>
 </main>
