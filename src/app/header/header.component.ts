@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../shared/button/button.component';
+import { ButtonComponent } from '../shared';
 
 @Component({
   selector: 'app-header',
