@@ -1,12 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: 'button[appButton], a[appButton]',
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css',
 })
-export class ButtonComponent {
-  @Input({ required: true }) title = '';
-}
+export class ButtonComponent {}

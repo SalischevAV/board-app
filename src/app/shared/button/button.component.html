@@ -1,8 +1,9 @@
-<button>
-  <span>
-    {{title}}
-  </span>
-  <span class="icon">
+<span>
+  <ng-content />
+</span>
+<span class="icon">
+  <!-- fallback -->
+  <ng-content select="icon">
     →
-  </span>
-</button>
+  </ng-content>
+</span>
