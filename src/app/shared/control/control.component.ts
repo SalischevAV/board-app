@@ -28,7 +28,7 @@ export class ControlComponent {
   // }
 
   label = input.required<string>();
-  //iy is host element
+  //it is host element
   private hostElement = inject(ElementRef);
 
   onClick() {
