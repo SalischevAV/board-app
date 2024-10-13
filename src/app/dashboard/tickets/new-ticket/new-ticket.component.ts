@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent, ControlComponent } from '../../../shared';
-import { Ticket } from '../tickets/ticket.model';
+import { Ticket } from '../ticket/ticket.model';
 
 @Component({
   selector: 'app-new-ticket',
@@ -20,6 +20,9 @@ import { Ticket } from '../tickets/ticket.model';
 })
 export class NewTicketComponent implements AfterViewInit, OnInit {
   addTicket = output<Pick<Ticket, 'title' | 'request'>>({});
+
+  enteredTitle = '';
+  enteredText = '';
 
   ngOnInit(): void {
     console.log('OnInit');

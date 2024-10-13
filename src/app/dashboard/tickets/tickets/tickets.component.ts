@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NewTicketComponent } from '../new-ticket/new-ticket.component';
-import { Ticket } from './ticket.model';
+import { Ticket } from '../ticket/ticket.model';
 import { TicketComponent } from '../ticket/ticket.component';
 
 @Component({
@@ -21,5 +21,10 @@ export class TicketsComponent {
       status: 'open',
     };
     this.tickets.push(ticket);
+  }
+
+  onCloseTicket(ticketId: string) {
+    const ticketIndex = this.tickets.findIndex(item => item.id === ticketId);
+    this.tickets[ticketIndex].status = 'close';
   }
 }
